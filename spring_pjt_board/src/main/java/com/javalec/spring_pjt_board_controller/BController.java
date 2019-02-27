@@ -34,13 +34,14 @@ public class BController {
 	@RequestMapping("/wirte_view")
 	public String write_view(Model mode) {
 		System.out.println("write_view()");
+	
 		
 		return "write_view";
 	}
 	
 	@RequestMapping("/write")
 	public String write(HttpServletRequest request, Model model) {
-		System.out.println("write()");
+		System.out.println("write()"); 
 		
 		model.addAttribute("request", request);
 		command = new BWriteCommand();
